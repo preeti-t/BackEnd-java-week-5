@@ -3,7 +3,10 @@
 */
 
 package writing.examples;
-import java.io.*;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Example1
 {

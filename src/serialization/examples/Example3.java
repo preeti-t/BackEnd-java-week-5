@@ -5,7 +5,8 @@
 package serialization.examples;
 
 import java.io.*;
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
 
 class Employee implements Serializable
 {

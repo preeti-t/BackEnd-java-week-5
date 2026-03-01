@@ -3,8 +3,12 @@
 */
 
 package serialization.examples;
-import java.io.*;
-import java.util.*;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.util.List;
 
 public class Example4
 {

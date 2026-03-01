@@ -2,7 +2,6 @@ package dates.exercises;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.time.LocalDateTime;
 
 /**
  * Exercise 1: Basic Date and Time Operations

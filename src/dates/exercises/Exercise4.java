@@ -1,7 +1,6 @@
 package dates.exercises;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 /**
  * Exercise 4: Date Formatting and Parsing

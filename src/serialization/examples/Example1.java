@@ -4,7 +4,7 @@
 
 package serialization.examples;
 
-import java.io.*;
+import java.io.*;   //* is wildcard, but importing by class name is better than this.
 
 class Student implements Serializable
 {

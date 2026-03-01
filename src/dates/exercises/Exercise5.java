@@ -1,9 +1,6 @@
 package dates.exercises;
 
 import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
-import java.time.temporal.TemporalAdjusters;
-import java.time.DayOfWeek;
 
 /**
  * Exercise 5: Date Comparisons and Advanced Operations

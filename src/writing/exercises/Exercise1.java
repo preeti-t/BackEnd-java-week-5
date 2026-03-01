@@ -5,8 +5,6 @@
  */
 
 package writing.exercises;
-import java.io.*;
-import java.util.*;
 
 public class Exercise1
 {

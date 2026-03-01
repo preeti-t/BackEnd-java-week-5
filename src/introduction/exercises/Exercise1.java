@@ -9,7 +9,6 @@
  */
 
 package introduction.exercises;
-import java.io.*;
 
 public class Exercise1
 {

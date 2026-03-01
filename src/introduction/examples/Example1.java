@@ -6,7 +6,7 @@
 
 package introduction.examples;
 
-import java.io.*;
+import java.io.File;
 
 public class Example1
 {

@@ -6,7 +6,6 @@
  */
 
 package serialization.exercises;
-import java.io.*;
 
 public class Exercise3
 {

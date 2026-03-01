@@ -1,7 +1,5 @@
 package dates.exercises;
 
-import java.time.LocalDate;
-
 /**
  * Exercise 2: Date Arithmetic
  * 

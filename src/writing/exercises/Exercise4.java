@@ -6,8 +6,6 @@
 
 package writing.exercises;
 
-import java.io.*;
-
 public class Exercise4
 {
     public static void main(String[] args)

@@ -1,9 +1,9 @@
 package dates.examples;
 
-import java.time.LocalDate;
-import java.time.Period;
-import java.time.LocalTime;
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.Period;
 
 /**
  * Example 3: Period and Duration

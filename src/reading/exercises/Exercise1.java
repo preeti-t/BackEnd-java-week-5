@@ -5,7 +5,6 @@
  */
 
 package reading.exercises;
-import java.io.*;
 
 public class Exercise1
 {

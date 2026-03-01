@@ -2,8 +2,6 @@ package dates.exercises;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.time.Period;
-import java.time.Duration;
 
 /**
  * Exercise 3: Period and Duration Calculations

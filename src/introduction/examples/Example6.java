@@ -6,7 +6,10 @@
 
 package introduction.examples;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class Example6
 {

@@ -5,10 +5,6 @@
 
 package writing.exercises;
 
-import java.io.*;
-import java.io.*;
-import java.time.*;
-
 public class Exercise2
 {
     public static void main(String[] args)

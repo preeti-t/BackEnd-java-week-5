@@ -4,7 +4,10 @@
  */
 
 package reading.examples;
-import java.io.*;
+
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class Example1
 {

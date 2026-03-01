@@ -6,7 +6,9 @@
 
 package introduction.examples;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 public class Example5
 {
     public static void main(String[] args)
