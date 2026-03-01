@@ -185,7 +185,7 @@ While assertions are useful, they have limitations:
 - No test organization features
 - No setup/teardown hooks
 
-This is why professional projects use **JUnit** or **TestNG**, which you'll learn later!
+This is why professional projects use **JUnit** or **Mockito** or **TestNG**, which you'll learn later!
 
 ---
 
