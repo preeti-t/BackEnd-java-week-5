@@ -23,22 +23,75 @@ package generics.exercises;
  *    - Pair<String, Integer> for ("age", 25)
  *    - Swap it and print both pairs
  */
-public class Exercise1 {
-    
-    public static void main(String[] args) {
-        System.out.println("=== Task 1 & 2: Container Class ===\n");
-        
-        // TODO: Create Container instances and use them
-        
-        
-        System.out.println("\n=== Task 3 & 4: Pair Class ===\n");
-        
-        // TODO: Create Pair instances, try swap() method
-        
+public class Exercise1
+{
+    public static void main(String[] args)
+    {
+
+        Container<String> stringContainer = new Container<>("Hello");
+        Container<Integer> intContainer = new Container<>(100);
+        Container<Boolean> boolContainer = new Container<>(true);
+
+        System.out.println("String value: " + stringContainer.getValue());
+        System.out.println("Integer value: " + intContainer.getValue());
+        System.out.println("Boolean value: " + boolContainer.getValue());
+
+
+        Pair<String, Integer> agePair = new Pair<>("age", 25);
+
+        System.out.println("Original Pair: " +
+                agePair.getKey() + " = " + agePair.getValue());
+
+        Pair<Integer, String> swapped = agePair.swap();
+
+        System.out.println("Swapped Pair: " + swapped);
     }
 }
 
-// TODO: Task 1 - Create Container<T> class here
+class Container<T> {
 
+    private T value;
 
-// TODO: Task 3 - Create Pair<K, V> class here
+    public Container(T value) {
+        this.value = value;
+    }
+
+    public T getValue() {
+        return value;
+    }
+
+    public void setValue(T value) {
+        this.value = value;
+    }
+
+    public boolean isEmpty() {
+        return value == null;
+    }
+}
+
+class Pair<K, V> {
+    private K key;
+    private V value;
+
+    public Pair(K key, V value) {
+        this.key = key;
+        this.value = value;
+    }
+
+    public K getKey() {
+        return key;
+    }
+
+    public V getValue() {
+        return value;
+    }
+
+    public Pair<V, K> swap() {
+        return new Pair<>(value, key);
+    }
+
+    @Override
+    public String toString() {
+        return "K: " + this.key + ", V: " + this.value;
+    }
+}

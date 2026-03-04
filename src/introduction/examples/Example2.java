@@ -16,8 +16,7 @@ public class Example2
         // Define a safe, OS-independent file path
         String path = "resources" + File.separator + "data.txt";
         File file = new File(path);
-        try
-        {
+        try {
             // Try to create the file
             if (file.createNewFile())
             {
