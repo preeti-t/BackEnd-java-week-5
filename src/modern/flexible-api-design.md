@@ -1,5 +1,5 @@
-
-# Varargs • Anonymous Classes • Builder Pattern
+# Flexible API Design
+## Varargs • Anonymous Classes • Builder Pattern
 
 This module covers three powerful Java features that improve flexibility, readability, and API design.
 
@@ -73,7 +73,7 @@ Example
 
 ```java
 interface Printer {
-    void print();
+    void print(String text);
 }
 
 ```
@@ -106,36 +106,12 @@ Comparator<String> comparator = new Comparator<>() {
 ```
 This creates an anonymous class implementing Comparator.
 
-When Do We Use It?
+### Note
+Anonymous classes were widely used before Java 8.
+Later in the course we will learn **Lambda Expressions**, which provide a shorter syntax for many cases where anonymous classes were used.
 
-Comparator
 
-Runnable
-
-Event listeners
-
-Strategy pattern
-
-Anonymous Class vs Lambda
-
-If the interface has one abstract method, we can use lambda:
-
-```java
-Comparator<String> comparator =
-(a, b) -> a.length() - b.length();
-```
-✔ Lambda works only for functional interfaces
-❌ Anonymous classes work for abstract classes too
-
-Mini Exercise
-
-Sort a list of integers in reverse order using:
-
-Anonymous class
-
-Then using lambda
-
-3️⃣ Builder Pattern — Clean Object Creation
+## Builder Pattern — Clean and Readable Object Creation
 What Problem Does It Solve?
 
 When constructors have too many parameters:
@@ -200,11 +176,16 @@ When Should You Use Builder?
 
 Many optional parameters
 
-Immutable objects
-
 Clean API design
 
-🔥 Mini Integration Example
+```
+This style is called a **Fluent API**.
+
+Each method returns the same object so that method calls can be chained.
+
+```
+
+### Mini Examples
 
 Example of all three concepts:
 
@@ -220,12 +201,26 @@ Runnable onComplete = new Runnable() {
         System.out.println("Done!");
     }
 };
+
 Notification notification = new Notification.Builder()
 .message("Hello")
 .priority(1)
 .build();
 
 ```
+
+## Functional Interfaces
+
+Interfaces that have only one method are called functional interfaces.
+```java
+@FunctionalInterface
+interface Calculator {
+    int add(int a, int b);
+}
+```
+We'll use this term later.
+
+
 Now we have:
 
 Flexible input → varargs
@@ -234,17 +229,7 @@ Custom behavior → anonymous class
 
 Clean object creation → builder
 
-🧠 Learning Outcomes
-
-After this module, you should be able to:
-
-✅ Use varargs correctly
-✅ Understand when to use anonymous classes
-✅ Replace anonymous classes with lambdas when possible
-✅ Implement the Builder pattern
-✅ Understand how these tools improve API design
-
-🎯 Why These Topics Matter
+### Why These Topics Matter
 
 These concepts appear frequently in:
 
