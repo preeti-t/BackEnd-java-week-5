@@ -96,7 +96,7 @@ public class Example2 {
     /**
      * Method that works with any List of Number subclasses
      */
-    public static double sumNumbers(List<? extends Number> numbers) {
+    public static <T extends Number> double sumNumbers(List<T> numbers) {
         double sum = 0;
         for (Number num : numbers) {
             sum += num.doubleValue();
@@ -107,7 +107,7 @@ public class Example2 {
     /**
      * Calculate average of numbers
      */
-    public static double average(List<? extends Number> numbers) {
+    public static <T extends Number> double average(List<T> numbers) {
         if (numbers.isEmpty()) {
             return 0;
         }

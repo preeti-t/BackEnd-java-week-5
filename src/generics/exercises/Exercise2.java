@@ -14,9 +14,10 @@ import java.util.List;
  *    with elements in reverse order
  *    - Try with different array types
  * 
- * 3. Write a method findMin(List<? extends Number> numbers) that returns
+ * 3. Write a method findMin(List<T> numbers) that returns
  *    the smallest number as a double
  *    - Try with List<Integer> and List<Double>
+ *    - Use a bounded type parameter: <T extends Number>
  * 
  * 4. Create a generic class Calculator<T extends Number>
  *    - Add add(), subtract(), multiply() methods that work with T
@@ -70,7 +71,7 @@ public class Exercise2 {
     // TODO: Task 2 - Implement reverse method
     
     
-    // TODO: Task 3 - Implement findMin method
+    // TODO: Task 3 - Implement: <T extends Number> double findMin(List<T> numbers)
     
     
     // TODO: Task 5 - Implement countGreaterThan method
