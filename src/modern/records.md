@@ -1,11 +1,12 @@
 # Records in Modern Java
 
-Records are a simple way to create immutable data classes in Java.
-They reduce boilerplate code and make data modeling cleaner.
-
----
-
 ## What is a Record?
+Records are a special kind of class that:
+- Are **immutable** by design
+- Automatically provide implementations of `equals()`, `hashCode()`, and `toString()`
+- Generate a canonical constructor based on the declared components
+- Provide accessor methods for each component
+- They reduce boilerplate code and make data modeling cleaner.
 
 ```java
 public record Student(String name, int age) {}
@@ -44,20 +45,47 @@ System.out.println(book.title());
 System.out.println(book);
 ```
 
----
+## Key Features
 
-## Validation in Records
-
-You can add simple validation in a compact constructor:
+### 1. Automatic Constructor
+The canonical constructor is automatically generated based on the record components:
 
 ```java
-public record User(String username, int age) {
-    public User {
-        if (username == null || username.isBlank()) {
-            throw new IllegalArgumentException("Username cannot be blank");
-        }
+public record Person(String name, int age) {}
+
+// Usage
+Person person = new Person("Alice", 30);
+```
+
+### 2. Accessor Methods
+Accessor methods are automatically generated with the same name as the component:
+
+```java
+Person person = new Person("Alice", 30);
+System.out.println(person.name());  // Alice
+System.out.println(person.age());   // 30
+```
+
+### 3. Built-in Methods
+Records automatically provide:
+- `equals()`: Compares all components
+- `hashCode()`: Based on all components
+- `toString()`: Returns a string representation of all components
+
+---
+
+## Custom Validation
+
+You can add validation by defining a custom canonical constructor:
+
+```java
+public record Person(String name, int age) {
+    public Person {
         if (age < 0) {
             throw new IllegalArgumentException("Age cannot be negative");
+        }
+        if (name == null || name.isBlank()) {
+            throw new IllegalArgumentException("Name cannot be empty");
         }
     }
 }

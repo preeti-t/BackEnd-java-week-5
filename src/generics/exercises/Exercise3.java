@@ -1,93 +1,58 @@
 package generics.exercises;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
- * Exercise 3: Wildcards and PECS
- * 
+ * Exercise 3: Type Erasure and Runtime Type Safety
+ *
  * Tasks:
- * 1. Write a method printList(List<?> list) that prints any list
- *    - Try with different types of lists
- * 
- * 2. Write a method sumList(List<? extends Number> numbers) that calculates
- *    the sum of all numbers
- *    - Try with List<Integer>, List<Double>, and mixed List<Number>
- * 
- * 3. Write a method addThreeIntegers(List<? super Integer> list) that adds
- *    the numbers 10, 20, 30 to the list
- *    - Try with List<Integer>, List<Number>, and List<Object>
- * 
- * 4. Write a method copy(List<? extends T> source, List<? super T> dest)
- *    that copies all elements from source to destination
- *    - Demonstrate PECS principle
- *    - Try by copying List<Integer> to List<Number>
- *    - Try by copying List<Double> to List<Object>
- * 
- * 5. Write a method maxOfTwo(List<? extends Number> list1, 
- *                            List<? extends Number> list2)
- *    that returns the maximum element from both lists combined
- *    - Try with different number types
- * 
- * 6. BONUS: Create a method that demonstrates why you can't add to
- *    List<? extends Number> (producer)
- *    Write a comment explaining why
+ * 1. Create two lists:
+ *    - List<String> names
+ *    - List<Integer> ids
+ *    Print whether their runtime class is the same.
+ *
+ * 2. Write a method
+ *    <T> T safeCast(Object value, Class<T> expectedType)
+ *    - Return the value cast to T when possible
+ *    - Return null when the cast is not valid
+ *
+ * 3. Create a generic class TypedValue<T> with:
+ *    - fields: T value, Class<T> type
+ *    - constructor
+ *    - getters
+ *
+ * 4. Write a generic method
+ *    <T extends Number> double average(List<T> numbers)
+ *    - Return 0 for an empty list
+ *
+ * 5. Refactor this raw list to a typed list and explain why:
+ *    List raw = new ArrayList();
  */
 public class Exercise3 {
-    
+
     public static void main(String[] args) {
-        System.out.println("=== Task 1: Print Any List ===\n");
-        
-        // TODO: Call printList with different types
-        
-        
-        System.out.println("\n=== Task 2: Sum Numbers ===\n");
-        
-        // TODO: Call sumList
-        List<Integer> integers = Arrays.asList(1, 2, 3, 4, 5);
-        List<Double> doubles = Arrays.asList(1.5, 2.5, 3.5);
-        
-        
-        System.out.println("\n=== Task 3: Add Integers ===\n");
-        
-        // TODO: Call addThreeIntegers with different list types
-        List<Integer> intList = new ArrayList<>();
-        List<Number> numList = new ArrayList<>();
-        List<Object> objList = new ArrayList<>();
-        
-        
-        System.out.println("\n=== Task 4: Copy Lists (PECS) ===\n");
-        
-        // TODO: Demonstrate PECS with copy method
-        
-        
-        System.out.println("\n=== Task 5: Max of Two Lists ===\n");
-        
-        // TODO: Call maxOfTwo method
-        
-        
-        System.out.println("\n=== Task 6: BONUS - Why Can't Add? ===\n");
-        
-        // TODO: Try to explain and demonstrate
-        
+        System.out.println("=== Task 1: Type Erasure Check ===\n");
+        List<String> names = new ArrayList<>();
+        List<Integer> ids = new ArrayList<>();
+
+        // TODO: Print the runtime class of both lists and compare them
+
+        System.out.println("\n=== Task 2: safeCast Method ===\n");
+        // TODO: Call safeCast with matching and non-matching types
+
+        System.out.println("\n=== Task 3: TypedValue Class ===\n");
+        // TODO: Create TypedValue<String> and TypedValue<Integer> objects
+
+        System.out.println("\n=== Task 4: Average Method ===\n");
+        // TODO: Call average with integer and double lists
+
+        System.out.println("\n=== Task 5: Remove Raw Types ===\n");
+        // TODO: Replace raw list with a typed list
     }
-    
-    // TODO: Task 1 - Implement printList
-    
-    
-    // TODO: Task 2 - Implement sumList
-    
-    
-    // TODO: Task 3 - Implement addThreeIntegers
-    
-    
-    // TODO: Task 4 - Implement copy method
-    
-    
-    // TODO: Task 5 - Implement maxOfTwo
-    
-    
-    // TODO: Task 6 - BONUS
-    
+
+    // TODO: Task 2 - Implement safeCast
+
+
+    // TODO: Task 4 - Implement average
 }

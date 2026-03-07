@@ -16,12 +16,12 @@ import java.util.List;
  * 
  * 2. Create Box<String> and Box<Integer> instances and print them
  * 
- * 3. Write a static method printAll(List<?> items) that prints each element
+ * 3. Write a static method <T> printAll(List<T> items) that prints each element
  * 
- * 4. Write a static method addDefaults(List<? super Integer> numbers)
+ * 4. Write a static method addDefaults(List<Integer> numbers)
  *    that adds integers 1, 2, 3 to the list
  * 
- * 5. Write a static method sumNumbers(List<? extends Number> numbers)
+ * 5. Write a static method <T extends Number> sumNumbers(List<T> numbers)
  *    that returns the sum as double
  * 
  * 6. Run all methods in main()
@@ -50,13 +50,13 @@ public class Exercise5 {
         
     }
     
-    // TODO: Task 3 - Implement printAll method
+    // TODO: Task 3 - Implement: public static <T> void printAll(List<T> items)
     
     
-    // TODO: Task 4 - Implement addDefaults method
+    // TODO: Task 4 - Implement addDefaults(List<Integer> numbers)
     
     
-    // TODO: Task 5 - Implement sumNumbers method
+    // TODO: Task 5 - Implement: public static <T extends Number> double sumNumbers(List<T> numbers)
     
 }
 
